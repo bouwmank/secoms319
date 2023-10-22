@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+     <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Kellan Bouwman">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="./quiz.js"></script>
+
+        <link rel="stylesheet" href="./styles/style.css">
+        <title>Midterm Quiz</title>
+    
+    </head>
+    
+    <body onload = "onLoad()">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="./index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="./quiz.html">Quiz</a>
+                  <a class="nav-link" href="./about.html">About The Authors</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+
+
+        <h4 name="question" value="title"></h4>
+        <div id="questionBody"></div>
+        <ul class="choices">
+            <li>
+                <label>
+                    <input type="radio" name="question" value="a" onclick="Check(this.value);"/><span id="a"></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question" value="b"  onclick="Check(this.value);"/><span id="b"></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question" value="c"  onclick="Check(this.value);"/><span id="c"></span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="question" value="d"  onclick="Check(this.value);"/><span id="d"></span>
+                </label>
+            </li>
+        </ul>
+        
+        <button type="button" onclick="getNext();">Next</button>
+
+        <footer>
+            <p>&copy; 2023 Kellan Bouwman</p>
+            <p>DISCLAIMER: I do not own any of images show in on these web pages</p>
+        </footer>
+
+    </body>
+</html>
